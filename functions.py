@@ -290,7 +290,7 @@ async def youtube(requested_by, query, message):
     thumbnail = results[0].thumbnails[0]
     duration = results[0].duration
     views = results[0].views
-    if time_to_seconds(duration) >= 1800:
+    if time_to_seconds(duration) >= 10800:
         return await m.edit("__**Bruh! Only songs within 30 Mins.**__")
     await m.edit("__**Processing Thumbnail.**__")
     cover = await generate_cover(
